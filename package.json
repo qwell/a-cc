@@ -1,0 +1,43 @@
+{
+  "name": "happy-ts",
+  "version": "0.1.0",
+  "repository": "https://github.com/qwell/happy-ts",
+  "author": "Jason Parker",
+  "license": "GPLv3",
+  "main": "dist/index.js",
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "yarn@4.0.1",
+  "scripts": {
+    "lint": "eslint --cache --cache-strategy metadata --cache-location ./.cache/eslint src/",
+    "format": "prettier --write --cache --cache-strategy metadata --cache-location ./.cache/prettier .",
+    "clean": "rimraf dist/ .cache/",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/eslint": "^8.44.6",
+    "@types/node": "^20.8.10",
+    "@types/prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "@yarnpkg/sdks": "^3.0.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2",
+    "typescript-eslint-language-service": "^5.0.5",
+    "vitest": "^0.34.6"
+  }
+}
