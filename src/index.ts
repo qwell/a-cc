@@ -23,6 +23,14 @@ app.get('/countries/allowed/:ipAddr', (req, res) => {
   });
 });
 
+app.get('/countries/:ipAddr', (req, res) => {
+  const { ipAddr } = req.params;
+
+  void API.getCountry(ipAddr).then((country) => {
+    res.json(country);
+  });
+});
+
 /* TODO: Tests
  *   - call GeoIP2 with incorrect method(s) for DB type
  */
