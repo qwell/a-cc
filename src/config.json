@@ -1,0 +1,8 @@
+{
+  "path": "/var/lib/GeoIP/",
+  "databases": {
+    "ASN": "GeoLite2-ASN.mmdb",
+    "City": "GeoLite2-City.mmdb",
+    "Country": "GeoLite2-Country.mmdb"
+  }
+}
