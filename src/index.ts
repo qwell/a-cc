@@ -25,7 +25,6 @@ app.get('/countries/allowed/:ipAddr', (req, res) => {
 
 /* TODO: Tests
  *   - call GeoIP2 with incorrect method(s) for DB type
- *   - call API without countries
  */
 
 if (import.meta.vitest) {
